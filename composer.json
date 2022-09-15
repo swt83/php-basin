@@ -1,7 +1,7 @@
 {
-    "name": "travis/briteverify",
-    "description": "A PHP package for working w/ the BriteVerify API.",
-    "homepage": "https://github.com/swt83/php-briteverify",
+    "name": "travis/basin",
+    "description": "A PHP package for working w/ the Basin API.",
+    "homepage": "https://github.com/swt83/php-basin",
     "license": "MIT",
     "authors": [
         {
@@ -9,15 +9,8 @@
             "email": "scott.w.travis@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:swt83/php-ex.git"
-        }
-    ],
     "require": {
-        "php": ">=5.3.0",
-        "travis/ex": "1.0.0"
+        "php": ">=5.3.0"
     },
     "autoload": {
         "psr-4": {
