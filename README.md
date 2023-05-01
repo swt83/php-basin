@@ -11,17 +11,14 @@ Normal install via Composer.
 ```php
 use Travis\Basin;
 
-// submit
+// retreive data
 $response = Basin::run('YOURAPIKEY', 'submissions', [
     'filter_by' => 'all',
     'page' => 1,
     'form_id' => 'YOURFORMID',
 ]);
-```
 
-The response will look like this:
-
-```
+// response
 stdClass Object
 (
     [submissions] => Array
@@ -72,6 +69,13 @@ stdClass Object
         )
 
 )
+
+// submit data
+$response = Basin::post('URLENDPOINT', [
+    'first' => 'Joe',
+    'last' => 'Shmoe',
+    'email' => 'joeshmoe@foobar.net',
+]);
 ```
 
 See the [documentation](https://usebasin.com/docs/api) for more information.
