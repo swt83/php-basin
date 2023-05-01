@@ -4,7 +4,7 @@ namespace Travis;
 
 class Basin
 {
-    public static function post($endpoint, $arguments)
+    public static function post($origin, $endpoint, $arguments)
     {
         // setup curl request
         $ch = curl_init();
@@ -15,6 +15,7 @@ class Basin
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $arguments);
+        curl_setopt($ch,CURLOPT_HTTPHEADER, array('Origin: '.$origin));
         $response = curl_exec($ch);
         $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 

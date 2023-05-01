@@ -71,7 +71,7 @@ stdClass Object
 )
 
 // submit data
-$response = Basin::post('URLENDPOINT', [
+$response = Basin::post('YOURWEBSITE.com', 'URLENDPOINT', [
     'first' => 'Joe',
     'last' => 'Shmoe',
     'email' => 'joeshmoe@foobar.net',
